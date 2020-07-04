@@ -138,11 +138,16 @@ USE_L10N = True
 USE_TZ = True
 
 
-# CORS
+# CORS WHITELIST
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://relaxed-curie-e9a516.netlify.app"
+    "http://127.0.0.1:8080"
 ]
 
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r"^https://\w+\.netlify\.app$",
+]
 
 # JWT
 JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
